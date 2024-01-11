@@ -1,0 +1,64 @@
+---
+import Card from '../Card.astro';
+import img1 from '../../../public/proyecto-1.webp'
+import img2 from '../../../public/proyecto-2.webp'
+import img3 from '../../../public/proyecto-3.webp'
+import img4 from '../../../public/proyecto-4.webp'
+import img5 from '../../../public/proyecto-5.webp'
+import img6 from '../../../public/proyecto-6.webp'
+import img7 from '../../../public/proyecto-7.webp'
+---
+
+<section class="w-full h-auto pb-20" id="projects">
+  <h2 class="text-3xl font-bold my-4 uppercase text-center text-[#26a0da]">Proyectos</h2>
+  <div class="flex overflow-x-auto  sm:grid justify-items-center sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <Card
+      img={img7.src}
+      title="Historia Iron man"
+      description="Historia de Tony stark | Iron man, desde sus inicios hasta su muerte, contada por Jarvis"
+      href="https://iron-man-eta.vercel.app/"
+      technologies="HTML, JavaScript, React, Tailwind, Astro"
+    />
+    <Card
+    img={img6.src}
+    title="Aerolineas"
+    description="Pagina de interfaz de Aerolineas, viajes entre aeropuertos, Personas que viajaron"
+    href="https://dapper-lamington-931cc1.netlify.app"
+    technologies="HTML, JavaScript, React, SASS"
+    />
+    <Card
+    img={img5.src}
+    title="Generador de contraseñas"
+    description="Generador de contraseñas de forma aleatoria con simbolos, mayusculas y numeros."
+    href="https://papaya-sable-b001a4.netlify.app"
+    technologies="HTML, CSS, JavaScript, React"
+    />
+    <Card
+      img={img4.src}
+      title="APP del clima"
+      description="Pagina del clima en tiempo real segun la ubicacion"
+      href="https://silly-khapse-6fa790.netlify.app/"
+      technologies="HTML, CSS, JavaScript, API"
+    />
+    <Card
+      img={img3.src}
+      title="Turismo Espacial"
+      description="Pagina de turimiento espacial, con el fin de mostrar la informacion de los planetas."
+      href="https://bejewelled-mermaid-66b5b6.netlify.app"
+      technologies="HTML, CSS, JavaScript"
+    />
+    <Card
+      img={img2.src}
+      title="Zapatillas"
+      description="Sneakers es una ecomers simple, minimalista para poder realizar pedidos en base al producto seleccionado, sumando las cantidades del mismo."
+      href="https://strong-croissant-997625.netlify.app/"
+      technologies="HTML, CSS, JavaScript"
+    />
+    <Card
+      img={img1.src}
+      title="Calculadora"
+      description="Prototipo de calculadora simple, los colores se utilizan para diferenciar entré operadores y formatos de resultados. Funciona con todos tipos de cálculos matemáticos."
+      href="https://dancing-toffee-be839c.netlify.app"
+      technologies="HTML, CSS, JavaScript"
+    />
+</section>

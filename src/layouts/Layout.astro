@@ -1,4 +1,9 @@
 ---
+import CV from '../components/sections/CV.astro';
+import Contact from '../components/sections/Contact.astro';
+import NavBar from '../components/sections/NavBar.astro';
+import Presentation from '../components/sections/Presentation.astro';
+import Projects from '../components/sections/Projects.astro';
 interface Props {
 	title: string;
 }
@@ -7,45 +12,38 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/public/Laptop.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
+		<main class="relative w-full h-full bg-black">
+			<NavBar title='Portfolio'/>
+			<section class="max-w-5xl lg:ml-72 lg:pr-3">
+				<Presentation/>
+				<Projects/>
+				<CV/>
+				<Contact/>
+			</section>
+		</main>
 		<slot />
 	</body>
 </html>
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		--accent: 104, 54, 166;
+		--accent-dark: 38, 160, 218;
+		--accent-gradient: linear-gradient( 45deg, rgb(var(--accent-dark)), rgb(var(--accent)) 80%, white 40%);
+		--transition: transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
+		background: #1a1313;
 		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
 	}
 </style>
